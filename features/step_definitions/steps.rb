@@ -15,7 +15,8 @@ Given("open the website") do
     inputSingle = driver.find_element(:id, 'user-message')
     inputSingle.send_keys("kevin")
     sleep(5)
-    driver.find_element(:class,'btn btn-default').click
+    buttonSingle = driver.find_element(:class,'btn btn-default').first
+    buttonSingle.click
     sleep(5)
   end
   
