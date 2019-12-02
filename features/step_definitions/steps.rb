@@ -5,6 +5,8 @@ require 'rspec'
 driver = Selenium::WebDriver.for:chrome
 
 Given("open the website") do
+    driver.manage.window.maximize
+    sleep(2)
     driver.navigate.to "https://www.seleniumeasy.com/test/basic-first-form-demo.html"
     sleep(6)
   end
