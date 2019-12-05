@@ -14,11 +14,16 @@ Given("open the website") do
   Then("user input single field") do
     inputSingle = driver.find_element(:id, 'user-message')
     inputSingle.send_keys("kevin")
-    sleep(5)
+    sleep(3)
     driver.find_element(:css, '.btn:nth-child(2)').click
     sleep(5)
   end
   
   Then("user input two field") do
-    pending # Write code here that turns the phrase above into concrete actions
+    driver.find_element(:id, 'sum1').click
+    driver.find_element(:id, 'sum1').send_keys('1')
+    driver.find_element(:id, 'sum2').click
+    driver.find_element(:id, 'sum2').send_keys('2')
+    driver.find_element(:css, '.btn:nth-child(3)').click
+    sleep(5)
   end
